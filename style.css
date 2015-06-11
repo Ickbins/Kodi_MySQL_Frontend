@@ -1,0 +1,67 @@
+body {
+   	background-color: #000000;
+	font-family: "Verdana", Sans-serif;
+	font-size: 12px;
+	color: white;
+}
+
+hr {
+	color: #12B2E7;
+	border: dashed 1px;	
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h1 {
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	color: #12B2E7;
+}
+
+table {
+	width: 1000px;
+}
+
+thead {
+	background-color: #12B2E7;
+}
+
+
+#navi td {
+	padding: 5px;
+}
+
+#content td {
+	padding: 5px;
+	text-align: center;
+}
+
+#content thead td {
+	padding: 5px;
+}
+
+#movie td {
+	padding: 5px;
+	text-align: left;
+}
+
+#codec table {
+	width: 100%;
+}
+
+#codec td {
+	background-color: #12B2E7;
+	padding: 2px;
+	text-align: center;
+	width: 60px;
+}
+	
