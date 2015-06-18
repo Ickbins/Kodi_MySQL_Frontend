@@ -1,6 +1,6 @@
 <tr>
 <td valign="top"><img width="180px" src="<?php echo $match[0][0];?>"></td>
-<td valign="bottom">";
+<td valign="bottom">
 
 <!-- Table with audio and codec information -->
 <div id="codec">
