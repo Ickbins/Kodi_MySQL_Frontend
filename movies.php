@@ -16,49 +16,14 @@ connect_db($database,$datahost,$username,$password);
 $sql='SELECT c00,c01,c07,c08,c11,idFile FROM movie ORDER BY c00 ASC';
 $query=mysql_query($sql) or die (mysql_error());
 
-//-- HTML head
-echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n";
-echo "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n";
-echo "<head>\n";
-echo "<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\n";
-echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n";
-echo "<title>".$text[$lang][0]."</title>\n";
-echo "</head>\n";
-
-echo "<body>\n";
+//-- HTML head und body start
+include 'templates/head.tpl';
 
 //-- Navigation menue
-echo "<div id=\"navi\">\n";
-echo "<table align=\"center\">\n";
-echo "<tr>\n";
-echo "<td rowspan=\"4\" width=\"150px\" align=\"center\"><a href=\"http://kodi.tv\" target=\"_blank\"><img src=\"./kodi.png\" width=\"150px\"></a></td>\n";
-echo "<td>&nbsp;</td>\n";
-echo "<td>&nbsp;</td>\n";
-echo "<td>&nbsp;</td>\n";
-echo "</tr>\n";
-echo "<tr>\n";
-echo "<td colspan=\"3\" align=\"right\">".$text[$lang][0]."</td>\n";
-echo "</tr>\n";
-echo "<tr>\n";
-echo "<td width=\"150px\" align=\"right\"><a href=\"index.php\"><h3>".$text[$lang][1]."</h3></a></td>\n";
-echo "<td width=\"150px\" align=\"right\"><a href=\"movies.php\"><h3>".$text[$lang][2]."</h3></a></td>\n";
-echo "<td width=\"150px\" align=\"right\"><a href=\"tvshows.php\"><h3>".$text[$lang][3]."</h3></a></td>\n";
-echo "</tr>\n";
-echo "</table>\n";
-echo "</div>\n";
+include 'templates/navigation.tpl';
 
-//-- Movies
-echo "<div id=\"movie\">\n";
-echo "<table align=\"center\">\n";
-echo "<thead>\n";
-echo "<tr>\n";
-echo "<td colspan=\"2\"><b>".$text[$lang][4]."</b></td>\n";
-echo "<td width=\"15%\"><b>".$text[$lang][5]."</b></td>\n";
-echo "<td><b>".$text[$lang][6]."</b></td>\n";
-echo "<td><b>".$text[$lang][7]."</b></td>\n";
-echo "<td><b>".$text[$lang][8]."</b></td>\n";
-echo "</tr>\n";
-echo "</thead>\n";
+//-- Movies, thead
+include 'templates/movie_thead.tpl';
 
 while ($row = mysql_fetch_array($query)) {
 $id=$row['idFile'];
@@ -92,36 +57,16 @@ if($row_stream['strAudioLanguage']!='') {$audio=$audio."<br>".strtoupper($row_st
 //--Extract Thumbnail-URLs, we will always use the first one, this may sometimes end in a missed picture
 preg_match_all('#\bhttp?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $row['c08'], $match);
 
-echo "<tr>\n";
-echo "<td valign=\"top\"><img width=\"180px\" src=\"".$match[0][0]."\"></td>\n";
-echo "<td valign=\"bottom\">";
-//-- Table with Audio und Codec Information
-echo "<div id=\"codec\">\n";
-echo "<table align=\"center\">\n";
-echo "<tr>\n";
-echo "<td>".$res."</td>\n";
-echo "</tr>\n";
-echo "<tr>\n";
-echo "<td>".$codec."</td>\n";
-echo "</tr>\n";
-echo "<tr>\n";
-echo "<td>".$audio."</td>\n";
-echo "</tr>\n";
-echo "</table>\n";
-echo "</div>\n";
-//-- End of the audio and codec information table
+//-- Movies, thead
+include 'templates/movie_while.tpl';
 
-echo "</td>\n";
-echo "<td valign=\"top\"><h1>".$row['c00']."</h1></td>\n";
-echo "<td valign=\"top\">".$row['c01']."</td>\n";
-echo "<td valign=\"top\">".$row['c07']."</td>\n";
-echo "<td valign=\"top\">".secondsToTime($row['c11'])."</td>\n";
-echo "</tr>\n";
 //-- Unset variables
 unset($audio);
 }
-echo "</table>\n";
-echo "</div>\n";
-echo "</body>\n";
-echo "</html>\n";
+
+//-- Movies, end
+include 'templates/movie_end.tpl';
+
+//-- Footer
+include 'templates/footer.tpl';
 ?>

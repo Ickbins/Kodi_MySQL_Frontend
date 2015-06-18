@@ -17,6 +17,8 @@ $text['de'][10]="Serienplot";
 $text['de'][13]="Gesamtlaufzeit";
 $text['de'][14]="Staffeln";
 $text['de'][15]="Episoden";
+$text['de'][16]="%a Tage, %h Stunden und %i Minute";
+$text['de'][17]="%h:%i:00";
 //-- English
 $text['en'][0]="Simple Frontend for Kodi a MySQL-Database";
 $text['en'][1]="Overview";
@@ -32,4 +34,6 @@ $text['en'][10]="Plot";
 $text['en'][13]="Overall Runtime";
 $text['en'][14]="Series";
 $text['en'][15]="Episodes";
+$text['en'][16]="%a Tage, %h Stunden und %i Minuten";
+$text['en'][17]="%h:%i:00";
 ?>
