@@ -3,7 +3,7 @@
 //-- Written by Christian Eckl, Berlin, June 2015
 //--
 //-- German
-$text['de'][0]="Einfaches Frontend zur Anzeige der Daten einer MySQL-Datenbank des Mediacenters KODI";
+$text['de'][0]="Inoffizielles, einfaches Frontend für das Mediacenter KODI";
 $text['de'][1]="Übersicht";
 $text['de'][2]="Filme";
 $text['de'][3]="Serien";
@@ -19,8 +19,10 @@ $text['de'][14]="Staffeln";
 $text['de'][15]="Episoden";
 $text['de'][16]="%a Tage, %h Stunden und %i Minute";
 $text['de'][17]="%h:%i:00";
+$text['de'][18]="Filme gefunden";
+$text['de'][19]="Zeige Seite";
 //-- English
-$text['en'][0]="Simple Frontend for Kodi a MySQL-Database";
+$text['en'][0]="Unofficial, simple frontend for the KODI mediacenter";
 $text['en'][1]="Overview";
 $text['en'][2]="Movies";
 $text['en'][3]="TV Shows";
@@ -36,4 +38,6 @@ $text['en'][14]="Series";
 $text['en'][15]="Episodes";
 $text['en'][16]="%a Tage, %h Stunden und %i Minuten";
 $text['en'][17]="%h:%i:00";
+$text['en'][18]="movies found";
+$text['en'][19]="Show page";
 ?>

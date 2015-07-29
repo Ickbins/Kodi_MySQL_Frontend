@@ -6,3 +6,4 @@
 <title><?php echo $text[$lang][0];?></title>
 </head>
 <body>
+<div id="kodi">

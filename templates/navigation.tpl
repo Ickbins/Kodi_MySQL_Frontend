@@ -1,18 +1,22 @@
 <div id="navi">
 <table align="center">
 <tr>
-<td rowspan="4" width="150px" align="center"><a href="http://kodi.tv" target="_blank"><img src="./kodi.png" width="150px"></a></td>
+<td rowspan="4" width="150px" align="center"><a href="http://kodi.tv" target="_blank"><img src="./kodi2.png" width="300px"></a></td>
+<td width="250px">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
+<td align="center" style="background-color: #12B2E7; font-size: 24px"><a href="index.php"><?php echo $text[$lang][2];?></a></td>
+</tr>
+<tr>
 <td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align="center" style="background-color: #12B2E7; font-size: 24px"><a href="tvshows.php"><?php echo $text[$lang][3];?></a></td>
 </tr>
 <tr>
 <td colspan="3" align="right"><?php echo $text[$lang][0];?></td>
-</tr>
-<tr>
-<td width="150px" align="right"><a href="index.php"><h3><?php echo $text[$lang][1];?></h3></a></td>
-<td width="150px" align="right"><a href="movies.php"><h3><?php echo $text[$lang][2];?></h3></a></td>
-<td width="150px" align="right"><a href="tvshows.php"><h3><?php echo $text[$lang][3];?></h3></a></td>
 </tr>
 </table>
 </div>

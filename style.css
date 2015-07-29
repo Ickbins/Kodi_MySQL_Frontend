@@ -1,21 +1,28 @@
 body {
    	background-color: #000000;
 	font-family: "Verdana", Sans-serif;
-	font-size: 12px;
+	font-size: 10px;
 	color: white;
 }
 
+#kodi {
+	width: 800px;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	}
+	
 hr {
 	color: #12B2E7;
 	border: dashed 1px;	
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 16px;
 }
 
 h1 {
-	font-size: 14px;
+	font-size: 12px;
 }
 
 a {
@@ -28,15 +35,31 @@ a:hover {
 }
 
 table {
-	width: 1000px;
+	width: 100%;
+	#background-color: white;
 }
 
 thead {
 	background-color: #12B2E7;
 }
 
-
 #navi td {
+	padding: 5px;
+}
+
+#navi a:hover {
+	color: #000000;
+}
+
+#pagination td {
+	background-color: #606060;
+	text-align: center;
+	padding: 5px;
+}
+
+#pagination_pages td {
+	background-color: #909090;
+	text-align: center;
 	padding: 5px;
 }
 
@@ -52,10 +75,6 @@ thead {
 #movie td {
 	padding: 5px;
 	text-align: left;
-}
-
-#codec table {
-	width: 100%;
 }
 
 #codec td {
