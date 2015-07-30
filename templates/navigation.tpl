@@ -1,7 +1,7 @@
 <div id="navi">
 <table align="center">
 <tr>
-<td rowspan="4" width="150px" align="center"><a href="http://kodi.tv" target="_blank"><img src="./kodi2.png" width="300px"></a></td>
+<td rowspan="4" width="150px" align="center"><a href="http://kodi.tv" target="_blank"><img src="./kodi.png" width="300px"></a></td>
 <td width="250px">&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
