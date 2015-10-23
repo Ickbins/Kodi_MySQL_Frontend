@@ -19,7 +19,7 @@
 <!-- End of the audio and codec information table -->
 
 </td>
-<td valign="top"><h1><?php echo $row['c00'];?></h1></td>
+<td valign="top"><h1><?php echo $row['c00'];?></h1><br /><?php echo $row['c16'];?></td>
 <td valign="top"><?php echo $row['c01'];?></td>
 <td valign="top"><?php echo $row['c07'];?></td>
 <td valign="top"><?php echo secondsToTime($row['c11'],$text[$lang]['17']);?></td>

@@ -13,7 +13,7 @@ include('./functions/lang.inc.php');
 connect_db($database,$datahost,$username,$password);
 
 //-- Read all needed values from the tvshowview
-$sql='SELECT c00,c01,c06,totalCount,totalSeasons FROM tvshowview ORDER BY c00 ASC';
+$sql='SELECT c00,c01,c06,totalCount,totalSeasons FROM tvshow_view ORDER BY c00 ASC';
 $query=mysql_query($sql) or die (mysql_error());
 
 //-- HTML head und body start
