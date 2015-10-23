@@ -12,13 +12,9 @@ include('./functions/lang.inc.php');
 //-- DB Connect
 connect_db($database,$datahost,$username,$password);
 
-//-- EDIT 27.07.15
-//-- Read all needed values from the movie database
-//-- $sql='SELECT c00,c01,c07,c08,c11,idFile FROM movie ORDER BY c00 ASC';
-
-//-- If the variable "letter" is set, show the newest 10 films
+//-- If the variable "letter" is NOT set, show the newest 10 films
 if (!isset($_GET['letter'])){
-	$sql='SELECT idMovie,c00,c01,c07,c08,c11,idFile FROM movie ORDER BY idMovie DESC LIMIT 10';
+	$sql='SELECT idMovie,c00,c01,c07,c08,c11,c16,idFile FROM movie ORDER BY idMovie DESC LIMIT 10';
 }
 else {
 	$letter=$_GET['letter'];
@@ -30,7 +26,7 @@ else {
 	else
 	{
 		$page=$_GET['page'];
-		$sql="SELECT idMovie,c00,c01,c07,c08,c11,idFile FROM movie WHERE c00 LIKE '".$letter."%' ORDER BY c00 ASC LIMIT 10 OFFSET $page";
+		$sql="SELECT idMovie,c00,c01,c07,c08,c11,c16,idFile FROM movie WHERE c00 LIKE '".$letter."%' ORDER BY c00 ASC LIMIT 10 OFFSET $page";
 	}
 }
 $query=mysql_query($sql) or die (mysql_error());

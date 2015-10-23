@@ -21,6 +21,9 @@ $text['de'][16]="%a Tage, %h Stunden und %i Minute";
 $text['de'][17]="%h:%i:00";
 $text['de'][18]="Filme gefunden";
 $text['de'][19]="Zeige Seite";
+$text['de'][20]="Filmsets";
+$text['de'][21]="Mit mehr als einem vorhandenem Film";
+
 //-- English
 $text['en'][0]="Unofficial, simple frontend for the KODI mediacenter";
 $text['en'][1]="Overview";
@@ -40,4 +43,6 @@ $text['en'][16]="%a Tage, %h Stunden und %i Minuten";
 $text['en'][17]="%h:%i:00";
 $text['en'][18]="movies found";
 $text['en'][19]="Show page";
+$text['en'][20]="Movie Sets";
+$text['en'][21]="With more than one movie available";
 ?>
