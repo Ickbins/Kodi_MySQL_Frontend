@@ -63,13 +63,14 @@ else {
 	//-- Reuse Movies, thead
 	include 'templates/movie_thead.tpl';
 
+	//-- While-Loop will now generate a formatted output of all films in the Movie Set
 	while ($row = mysql_fetch_array($query)) {
 		$id=$row['idFile'];
 		//-- Read from the streamdetails database all the information about codec, resolution and so on
 		$sql_stream='SELECT idFile,iStreamType,strVideoCodec,iVideoWidth,strAudioCodec,strAudioLanguage FROM streamdetails WHERE idFile='.$id.'';
 		$query_stream=mysql_query($sql_stream) or die (mysql_error());
 
-		//-- While-Loop will now generate a formatted output of all films in the Movie Set
+		//-- While-Loop will now generate a formatted output of audio codecs and movie resolution
 		while ($row_stream = mysql_fetch_array($query_stream))
 		{
 			//-- Building the table with the information about the used codec, resolution...
@@ -91,6 +92,11 @@ else {
 			if($row_stream['strAudioLanguage']!='') {$audio=$audio."<br>".strtoupper($row_stream['strAudioLanguage']);}
 			}
 		}
+
+		//--Read the filename from database
+		$sql_file='SELECT idFile,strFilename FROM files WHERE idFile='.$id.'';
+		$query_stream=mysql_query($sql_file) or die (mysql_error());
+		$filename=mysql_fetch_array($query_stream);
 
 		//--Extract Thumbnail-URLs, we will always use the first one, this may sometimes end in a missed picture
 		preg_match_all('#\bhttp?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $row['c08'], $match);
